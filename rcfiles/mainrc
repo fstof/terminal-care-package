@@ -1,0 +1,10 @@
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export CARE_PACKAGE=$HOME/terminal-care-package
+
+source $CARE_PACKAGE/rcfiles/javarc
+source $CARE_PACKAGE/rcfiles/androidrc
+source $CARE_PACKAGE/rcfiles/gitlabcirc
+source $CARE_PACKAGE/rcfiles/nvmrc
+source $CARE_PACKAGE/rcfiles/rbenvrc
+source $CARE_PACKAGE/rcfiles/functions

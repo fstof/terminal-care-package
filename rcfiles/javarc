@@ -1,0 +1,4 @@
+# Java env vars
+export JAVA_HOME=$(/usr/libexec/java_home)
+export JDK_HOME=$JAVA_HOME
+export JRE_HOME=$JAVA_HOME

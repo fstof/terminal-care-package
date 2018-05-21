@@ -1,44 +1,6 @@
-" Enable syntax highlightin
-syntax on
-
-" Make NERDTree open by default
-" autocmd vimenter * NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-
-" Add Powerline status bar
-" source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
-
-let g:airline_theme='dark'
-let g:airline_powerline_fonts = 1
-
-
-" Set some defaults
-set hidden
-set clipboard=unnamed
-set number
-set nowrap
-set textwidth=0
-set wrapmargin=0
-set splitbelow
-set splitright
-set mouse=a
-set laststatus=2
-
-" Remap pane navigation
-nnoremap <C-J> <C-W>j
-nnoremap <C-K> <C-W>k
-nnoremap <C-L> <C-W>l
-nnoremap <C-H> <C-W>h
-
-" Remap pane resize
-nnoremap <C-W>Down <C-W>+
-nnoremap <C-W>Up <C-W>-
-nnoremap <C-W>Left <C-W><
-nnoremap <C-W>Right <C-W>>
-
 set nocompatible              " be iMproved, required
 filetype off                  " required
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -47,12 +9,9 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
 Plugin 'scrooloose/nerdtree' 
-" Plugin 'scrooloose/nerdcommenter'
-" Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'vim-airline/vim-airline'
-" Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
-Plugin 'Quramy/tsuquyomi'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -69,5 +28,35 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+" Enable syntax highlightin
+syntax on
 
+" Make NERDTree open by default
+" autocmd vimenter * NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+let g:airline_theme='dark'
+let g:airline_powerline_fonts = 1
+
+map <C-n> :NERDTreeToggle<CR>
+
+" Set some defaults
+"set hidden
+set clipboard=unnamed
+set number
+set nowrap
+"set textwidth=0
+"set wrapmargin=0
+set splitbelow
+set splitright
+set mouse=a
+"set laststatus=2
+
+" Remap pane navigation
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+nnoremap <C-H> <C-W>h
