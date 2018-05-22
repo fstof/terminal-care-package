@@ -44,16 +44,16 @@ let g:airline_powerline_fonts = 1
 map <C-n> :NERDTreeToggle<CR>
 
 " Set some defaults
-"set hidden
+set hidden
 set clipboard=unnamed
 set number
 set nowrap
-"set textwidth=0
-"set wrapmargin=0
+set textwidth=0
+set wrapmargin=0
 set splitbelow
 set splitright
 set mouse=a
-"set laststatus=2
+set laststatus=2
 
 " Remap pane navigation
 nnoremap <C-J> <C-W>j
