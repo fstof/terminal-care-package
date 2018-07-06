@@ -8,3 +8,5 @@ source $CARE_PACKAGE/rcfiles/gitlabcirc
 source $CARE_PACKAGE/rcfiles/nvmrc
 source $CARE_PACKAGE/rcfiles/rbenvrc
 source $CARE_PACKAGE/rcfiles/functions
+
+source $HOME/.adhoc
