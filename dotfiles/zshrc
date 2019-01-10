@@ -109,3 +109,5 @@ alias dock-mongo-cli="docker exec -it some-mongo mongo"
 
 # custom environment variables
 source ~/.mainrc
+# custom autocomplete scripts
+source ~/.autocomplete
