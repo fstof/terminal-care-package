@@ -12,7 +12,9 @@ ln -s $HOME/terminal-care-package/dotfiles/autocomplete $HOME/.autocomplete
 ln -s $HOME/terminal-care-package/rcfiles/mainrc $HOME/.mainrc
 ln -s $HOME/terminal-care-package/oh-my-zsh/ $HOME/.oh-my-zsh
 
-
+# Add oh-my-zsh theme
+rm $HOME/.oh-my-zsh/themes/agnoster-fstof.zsh-theme
+ln -s $HOME/terminal-care-package/zsh/agnoster-fstof.zsh-theme $HOME/.oh-my-zsh/themes/agnoster-fstof.zsh-theme
 
 echo "Symbolic links created"
 
