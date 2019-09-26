@@ -1,2 +1,0 @@
-# load rbenv stuff
-eval "$(rbenv init -)"

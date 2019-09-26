@@ -1,3 +1,0 @@
-# Gitlab-CI build required
-export KEYSTORE_PATH=$HOME/development/projects/mobile/signing/android/momentum.upload.jks
-export KEYSTORE_PATH_DIST=$HOME/development/projects/mobile/signing/android/momentum.distribution.jks

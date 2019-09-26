@@ -1,0 +1,4 @@
+# load rbenv stuff
+eval "$(rbenv init -)"
+
+export PATH=$PATH:/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.6.0/bin
