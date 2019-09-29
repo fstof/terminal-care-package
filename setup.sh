@@ -14,6 +14,7 @@ ln -s $HOME/terminal-care-package/oh-my-zsh/ $HOME/.oh-my-zsh
 
 # Add oh-my-zsh theme
 rm $HOME/.oh-my-zsh/themes/agnoster-fstof.zsh-theme
+rm $HOME/.oh-my-zsh/themes/dracula.zsh-theme
 ln -s $HOME/terminal-care-package/zsh/agnoster-fstof.zsh-theme $HOME/.oh-my-zsh/themes/agnoster-fstof.zsh-theme
 ln -s $HOME/terminal-care-package/zsh/dracula/dracula.zsh-theme $HOME/.oh-my-zsh/themes/dracula.zsh-theme
 
@@ -46,3 +47,4 @@ if which fc-cache >/dev/null 2>&1 ; then
 fi
 
 echo "Powerline font installed to $font_dir"
+
