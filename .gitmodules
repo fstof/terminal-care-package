@@ -4,3 +4,6 @@
 [submodule "zsh/dracula"]
 	path = zsh/dracula
 	url = https://github.com/dracula/zsh.git
+[submodule "vim/Vundle.vim"]
+	path = vim/Vundle.vim
+	url = git@github.com:VundleVim/Vundle.vim.git

@@ -6,10 +6,13 @@ export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 
+####
+# Comment out the "source"s you dont need
+####
+
 source $CARE_PACKAGE/rcfiles/javarc
 source $CARE_PACKAGE/rcfiles/androidrc
 source $CARE_PACKAGE/rcfiles/nvmrc
 source $CARE_PACKAGE/rcfiles/rubyrc
 source $CARE_PACKAGE/rcfiles/flutterrc
-
-source $HOME/.adhoc
+source $CARE_PACKAGE/rcfiles/rustrc
