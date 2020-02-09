@@ -64,6 +64,7 @@ plugins=(
   docker-compose
   nvm
   npm
+  aws
 )
 
 # plugin customisations
