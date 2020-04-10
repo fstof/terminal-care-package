@@ -10,9 +10,9 @@ export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 # Comment out the "source"s you dont need
 ####
 
-source $CARE_PACKAGE/rcfiles/javarc
-source $CARE_PACKAGE/rcfiles/androidrc
-source $CARE_PACKAGE/rcfiles/nvmrc
-source $CARE_PACKAGE/rcfiles/rubyrc
-source $CARE_PACKAGE/rcfiles/flutterrc
-source $CARE_PACKAGE/rcfiles/rustrc
+source $CARE_PACKAGE/source_files/javarc
+source $CARE_PACKAGE/source_files/androidrc
+source $CARE_PACKAGE/source_files/nvmrc
+source $CARE_PACKAGE/source_files/rubyrc
+source $CARE_PACKAGE/source_files/flutterrc
+source $CARE_PACKAGE/source_files/rustrc
