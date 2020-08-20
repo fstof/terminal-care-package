@@ -12,6 +12,7 @@ export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 
 source $CARE_PACKAGE/source_files/javarc
 source $CARE_PACKAGE/source_files/androidrc
+source $CARE_PACKAGE/source_files/gradlerc
 source $CARE_PACKAGE/source_files/nvmrc
 source $CARE_PACKAGE/source_files/rubyrc
 source $CARE_PACKAGE/source_files/flutterrc
