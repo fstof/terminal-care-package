@@ -1,19 +1,34 @@
+################################################################################
+#### Here you choose which software to configure for the termiinal
+#### Add and remove these as required.
+#### REMEMBER: Check the other source files and ensure correct paths are used
+################################################################################
+
+####
+#### Common environment vars
+####
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+####
+#### Base for terminal-care-package. change this if you cloned to somewhere else
+####
 export CARE_PACKAGE=$HOME/terminal-care-package
 
+####
+#### some flags for ruby
+####
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 
 ####
-# Comment out the "source"s you dont need
+#### Comment out the source files you dont need
 ####
-
-source $CARE_PACKAGE/source_files/javarc
-source $CARE_PACKAGE/source_files/androidrc
-source $CARE_PACKAGE/source_files/gradlerc
-source $CARE_PACKAGE/source_files/nvmrc
-source $CARE_PACKAGE/source_files/rubyrc
-source $CARE_PACKAGE/source_files/flutterrc
-source $CARE_PACKAGE/source_files/rustrc
+source $CARE_PACKAGE/source_files/software/javarc
+source $CARE_PACKAGE/source_files/software/androidrc
+source $CARE_PACKAGE/source_files/software/gradlerc
+source $CARE_PACKAGE/source_files/software/nvmrc
+source $CARE_PACKAGE/source_files/software/rubyrc
+source $CARE_PACKAGE/source_files/software/flutterrc
+source $CARE_PACKAGE/source_files/software/rustrc

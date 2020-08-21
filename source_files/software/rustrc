@@ -1,0 +1,8 @@
+# load Rust stuff
+
+### change this to your Rust Cargo location
+export RUST_CARGO=$HOME/.cargo
+
+### more vars and PATH
+export PATH=$PATH:$RUST_CARGO/bin
+

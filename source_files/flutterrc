@@ -1,3 +1,0 @@
-FLUTTER_CHANNEL=stable
-
-export PATH=$PATH:$HOME/Library/flutter/flutter_$FLUTTER_CHANNEL/bin:$HOME/Library/flutter/flutter_$FLUTTER_CHANNEL/bin/cache/dart-sdk/bin

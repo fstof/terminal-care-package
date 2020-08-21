@@ -1,3 +1,8 @@
 # Gradle env vars
+
+### change this to your Gradle install location
 export GRADLE_HOME=$HOME/Library/gradle
+###
+
+### more vars and PATH
 export PATH=$PATH:$GRADLE_HOME/bin

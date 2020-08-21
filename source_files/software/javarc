@@ -1,5 +1,10 @@
 # Java env vars
+
+### change this to your Gradle install location
 export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
+###
+
+### more vars and PATH
 export JDK_HOME=$JAVA_HOME
 export JRE_HOME=$JAVA_HOME
 export PATH=$PATH:$JAVA_HOME/bin
