@@ -21,7 +21,7 @@ vim +PluginInstall +qall
 
 # Add oh-my-zsh theme
 rm $HOME/.oh-my-zsh/themes/agnoster-fstof.zsh-theme
-ln -s $HOME/terminal-care-package/zsh/dracula/dracula.zsh-theme $HOME/.oh-my-zsh/themes/dracula.zsh-theme
+ln -s $HOME/terminal-care-package/zsh/agnoster-fstof.zsh-theme $HOME/.oh-my-zsh/themes/agnoster-fstof.zsh-theme
 
 echo "Symbolic links created"
 
