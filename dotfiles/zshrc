@@ -61,10 +61,8 @@ CASE_SENSITIVE="true"
 plugins=(
   git
   docker
-  docker-compose
   nvm
   npm
-  aws
 )
 
 # plugin customisations

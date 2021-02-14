@@ -1,14 +1,28 @@
-## Clone the repo into `$HOME`
+## Install command line tools
 ```bash
-git clone --recurse-submodules https://github.com/fstof/terminal-care-package.git $HOME/terminal-care-package
+xcode-select --install
+```
+
+## Clone the repo
+```bash
+git clone --recurse-submodules https://github.com/fstof/terminal-care-package.git ~/terminal-care-package
 ```
 
 ## CD into folder
 ```bash
-cd $HOME/terminal-care-package
+cd ~/terminal-care-package
 ```
 
 ## Execute `setup.sh`
 ```bash
 ./setup.sh
+```
+
+## Install Homebrew and software
+```bash
+# install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+#install homebrew software
+brew bundle -f ~/terminal-care-package/Brewfile
 ```

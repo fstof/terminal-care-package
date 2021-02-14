@@ -29,6 +29,6 @@ source $CARE_PACKAGE/source_files/software/javarc
 source $CARE_PACKAGE/source_files/software/androidrc
 source $CARE_PACKAGE/source_files/software/gradlerc
 source $CARE_PACKAGE/source_files/software/nvmrc
-source $CARE_PACKAGE/source_files/software/rubyrc
+#source $CARE_PACKAGE/source_files/software/rubyrc
 source $CARE_PACKAGE/source_files/software/flutterrc
-source $CARE_PACKAGE/source_files/software/rustrc
+#source $CARE_PACKAGE/source_files/software/rustrc

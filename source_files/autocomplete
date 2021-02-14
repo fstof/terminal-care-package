@@ -1,16 +1,3 @@
-#
-# Installation:
-#
-# Via shell config file  ~/.bashrc  (or ~/.zshrc)
-#
-#   Append the contents to config file
-#   'source' the file in the config file
-#
-# You may also have a directory on your system that is configured
-#    for completion files, such as:
-#
-#    /usr/local/etc/bash_completion.d/
-
 ###-begin-flutter-completion-###
 
 if type complete &>/dev/null; then
@@ -57,5 +44,3 @@ fi
 ###-end-flutter-completion-###
 
 ## Generated 2019-01-10 04:28:41.796975Z
-## By /Users/fstof/Library/flutter/bin/cache/flutter_tools.snapshot
-
