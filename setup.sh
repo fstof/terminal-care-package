@@ -20,8 +20,8 @@ ln -s $HOME/terminal-care-package/vim/Vundle.vim $HOME/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
 # Add oh-my-zsh theme
-rm $HOME/.oh-my-zsh/themes/agnoster-fstof.zsh-theme
-ln -s $HOME/terminal-care-package/zsh/agnoster-fstof.zsh-theme $HOME/.oh-my-zsh/themes/agnoster-fstof.zsh-theme
+rm $HOME/.oh-my-zsh/custom/themes/agnoster-fstof.zsh-theme
+ln -s $HOME/terminal-care-package/zsh/agnoster-fstof.zsh-theme $HOME/.oh-my-zsh/custom/themes/agnoster-fstof.zsh-theme
 
 echo "Symbolic links created"
 
