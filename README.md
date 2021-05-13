@@ -1,8 +1,4 @@
-## Install command line tools
-```bash
-xcode-select --install
-```
-
+# Terminal (Linux / Mac)
 ## Clone the repo
 ```bash
 git clone https://github.com/fstof/terminal-care-package.git ~/terminal-care-package
@@ -17,6 +13,18 @@ cd ~/terminal-care-package
 ```bash
 ./setup.sh
 ```
+## To remove: Execute `remove.sh`
+```bash
+cd ~/
+~/terminal-care-package/remove.sh
+rm -rf ~/terminal-care-package
+```
+
+# Software (Mac)
+## Install command line tools
+```bash
+xcode-select --install
+```
 
 ## Install Homebrew and software
 ```bash
@@ -24,5 +32,5 @@ cd ~/terminal-care-package
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 #install homebrew software
-brew bundle -f ~/terminal-care-package/Brewfile
+brew bundle --file ~/terminal-care-package/Brewfile
 ```
