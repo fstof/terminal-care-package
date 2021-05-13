@@ -5,7 +5,7 @@ xcode-select --install
 
 ## Clone the repo
 ```bash
-git clone --recurse-submodules https://github.com/fstof/terminal-care-package.git ~/terminal-care-package
+git clone https://github.com/fstof/terminal-care-package.git ~/terminal-care-package
 ```
 
 ## CD into folder

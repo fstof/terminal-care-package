@@ -1,11 +1,14 @@
 #!/bin/sh
 
-rm $HOME/.vimrc
-rm $HOME/.zshrc
-rm $HOME/.mainrc
-rm $HOME/.autocomplete
-rm $HOME/.oh-my-zsh
-rm $HOME/.vim/bundle
+
+rm -rf $HOME/.oh-my-zsh
+rm -rf $HOME/.vim/bundle/Vundle.vim
+rm -rf $HOME/.vimrc
+rm -rf $HOME/.zshrc
+rm -rf $HOME/.mainrc
+rm -rf $HOME/.autocomplete
+rm -rf $HOME/.vim/bundle
+rm -rf $HOME/.p10k.zsh
 
 echo "Symbolic links deleted"
 
