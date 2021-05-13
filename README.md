@@ -1,22 +1,21 @@
 # Terminal (Linux / Mac)
-## Clone the repo
+## To install
 ```bash
+# Clone the repo
 git clone https://github.com/fstof/terminal-care-package.git ~/terminal-care-package
-```
-
-## CD into folder
-```bash
+# CD into folder
 cd ~/terminal-care-package
-```
-
-## Execute `setup.sh`
-```bash
+# Execute `setup.sh`
 ./setup.sh
 ```
-## To remove: Execute `remove.sh`
+
+## To uninstall
 ```bash
+# CD out of folder
 cd ~/
+# execute remove script
 ~/terminal-care-package/remove.sh
+# delete the leftovers
 rm -rf ~/terminal-care-package
 ```
 
