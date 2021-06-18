@@ -5,5 +5,6 @@ export FLUTTER_HOME=$HOME/Library/flutter/flutter_stable
 ###
 
 ### more vars and PATH
-export PATH=$PATH:$FLUTTER_HOME/bin:$FLUTTER_HOME/bin/cache/dart-sdk/bin
-export PATH="$PATH":"$HOME/.pub-cache/bin"
+export PATH=$PATH:$FLUTTER_HOME/bin: # flutter cli
+export PATH=$PATH:$FLUTTER_HOME/bin/cache/dart-sdk/bin # bundled dart cli
+export PATH=$PATH:$HOME/.pub-cache/bin # global pub

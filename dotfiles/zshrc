@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -60,6 +67,7 @@ CASE_SENSITIVE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  flutter
   zsh-autosuggestions
 )
 
@@ -103,15 +111,18 @@ source $ZSH/oh-my-zsh.sh
 
 alias dock-redis-cli="docker exec -it some-redis redis-cli"
 alias dock-mongo-cli="docker exec -it some-mongo mongo"
-alias flutter_b="~/Library/flutter/flutter_beta/bin/flutter"
-alias dart_b="~/Library/flutter/flutter_beta/bin/dart"
+#alias flutter_l="~/Library/flutter/flutter_legacy/bin/flutter"
+#alias dart_l="~/Library/flutter/flutter_legacy/bin/dart"
 
 # custom environment variables
 source ~/.mainrc
+#export PATH=$HOME/Library/flutter/flutter_legacy/bin:$PATH
 # custom autocomplete scripts
-source ~/.autocomplete
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 source /Users/fstof/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/terminal-care-package/dotfiles/p10k.zsh.
+[[ ! -f ~/terminal-care-package/dotfiles/p10k.zsh ]] || source ~/terminal-care-package/dotfiles/p10k.zsh
