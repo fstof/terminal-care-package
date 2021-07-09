@@ -7,7 +7,7 @@ brew "git"
 brew "nvm"
 cask "visual-studio-code"
 cask "android-studio"
-cask "flutter"
+cask "xcodes"
 brew "cocoapods"
 brew "python"
 
@@ -28,8 +28,22 @@ cask "keka"
 cask "vnc-viewer"
 cask "clipy"
 cask "vlc"
-cask "telegram"
 cask "alfred"
 cask "rectangle"
 cask "iterm2"
 cask "bitwarden"
+
+# Communication
+cask "telegram"
+cask "whatsapp"
+cask "slack"
+
+# Office
+cask "microsoft-teams"
+cask "microsoft-outlook"
+cask "microsoft-excel"
+cask "microsoft-word"
+cask "onedrive"
+
+# VPN
+cask "forticlient-vpn"
