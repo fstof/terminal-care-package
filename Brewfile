@@ -23,6 +23,7 @@ brew "scrcpy"
 
 # Software
 cask "google-chrome"
+cask "adobe-acrobat-pro"
 cask "docker"
 cask "keka"
 cask "vnc-viewer"
