@@ -1,14 +1,16 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+tap "beeftornado/rmtree"
+tap "leoafarias/fvm"
 
 # Development
 brew "git"
 brew "nvm"
+brew "fvm"
 cask "visual-studio-code"
 cask "android-studio"
 cask "xcodes"
-brew "cocoapods"
 brew "python"
 
 # Utils
@@ -20,6 +22,7 @@ brew "ffmpeg"
 brew "gnupg"
 brew "lcov"
 brew "scrcpy"
+brew "syncthing"
 
 # Software
 cask "google-chrome"
@@ -33,6 +36,7 @@ cask "alfred"
 cask "rectangle"
 cask "iterm2"
 cask "bitwarden"
+cask "obsidian"
 
 # Communication
 cask "telegram"

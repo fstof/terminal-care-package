@@ -1,10 +1,11 @@
 # Flutter environment vars and setup
 
 ### change this to your flutter install location
-export FLUTTER_HOME=$HOME/Library/flutter/flutter_stable
+#export FLUTTER_HOME=$HOME/Library/flutter/flutter_stable
+#export FLUTTER_HOME=$HOME/Library/flutter/flutter_other
 ###
 
 ### more vars and PATH
-export PATH=$PATH:$FLUTTER_HOME/bin: # flutter cli
-export PATH=$PATH:$FLUTTER_HOME/bin/cache/dart-sdk/bin # bundled dart cli
+#export PATH=$PATH:$FLUTTER_HOME/bin: # flutter cli
 export PATH=$PATH:$HOME/.pub-cache/bin # global pub
+export PATH=$PATH:$HOME/fvm/default/bin

@@ -23,12 +23,17 @@ export CPPFLAGS="-I/usr/local/opt/ruby/include"
 export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 
 ####
+#### minikube / hyperkit / docker setup
+####
+
+####
 #### Comment out the source files you dont need
 ####
-source $CARE_PACKAGE/source_files/software/javarc
+#source $CARE_PACKAGE/source_files/software/javarc
 source $CARE_PACKAGE/source_files/software/androidrc
 source $CARE_PACKAGE/source_files/software/gradlerc
 source $CARE_PACKAGE/source_files/software/nvmrc
-#source $CARE_PACKAGE/source_files/software/rubyrc
+source $CARE_PACKAGE/source_files/software/rubyrc
 source $CARE_PACKAGE/source_files/software/flutterrc
 #source $CARE_PACKAGE/source_files/software/rustrc
+source $CARE_PACKAGE/source_files/secrets || true

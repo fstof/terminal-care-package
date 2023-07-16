@@ -109,10 +109,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias dock-redis-cli="docker exec -it some-redis redis-cli"
-alias dock-mongo-cli="docker exec -it some-mongo mongo"
-#alias flutter_l="~/Library/flutter/flutter_legacy/bin/flutter"
-#alias dart_l="~/Library/flutter/flutter_legacy/bin/dart"
+#alias dock-redis-cli="docker exec -it some-redis redis-cli"
+#alias dock-mongo-cli="docker exec -it some-mongo mongo"
+alias f="fvm flutter"
+alias d="fvm dart"
 
 # custom environment variables
 source ~/.mainrc
@@ -126,3 +126,8 @@ source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highli
 
 # To customize prompt, run `p10k configure` or edit ~/terminal-care-package/dotfiles/p10k.zsh.
 [[ ! -f ~/terminal-care-package/dotfiles/p10k.zsh ]] || source ~/terminal-care-package/dotfiles/p10k.zsh
+
+## [Completion] 
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f ~/.dart-cli-completion/zsh-config.zsh ]] && . ~/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
