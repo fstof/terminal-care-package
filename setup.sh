@@ -25,9 +25,17 @@ echo "oh-my-zsh"
   ln -s $HOME/terminal-care-package/dotfiles/zshrc $HOME/.zshrc
   
   echo ""
-  echo "powerlevel10k theme"
+  echo "installing powerlevel10k"
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/themes/powerlevel10k
-    ln -s $HOME/terminal-care-package/dotfiles/p10k.zsh $HOME/.p10k.zsh
+  
+  echo ""
+  echo "p10k dracula theme"
+    git clone --depth=1 https://github.com/dracula/powerlevel10k.git $HOME/.oh-my-zsh/custom/themes/p10kDracula
+
+  echo ""
+  echo "set p10k configuration"
+    ln -s $HOME/.oh-my-zsh/custom/themes/p10kDracula/files/.p10k.zsh $HOME/.p10k.zsh
+    # ln -s $HOME/terminal-care-package/dotfiles/p10k.zsh $HOME/.p10k.zsh
 
   echo ""
   echo "agnoster-fstof theme"
