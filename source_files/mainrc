@@ -36,4 +36,5 @@ source $CARE_PACKAGE/source_files/software/nvmrc
 source $CARE_PACKAGE/source_files/software/rubyrc
 source $CARE_PACKAGE/source_files/software/flutterrc
 #source $CARE_PACKAGE/source_files/software/rustrc
+source $CARE_PACKAGE/source_files/software/dockerrc
 source $CARE_PACKAGE/source_files/secrets || true

@@ -26,8 +26,10 @@ brew "syncthing"
 
 # Software
 cask "google-chrome"
+cask "opera"
 cask "adobe-acrobat-reader"
 cask "docker"
+cask "podman-desktop"
 cask "keka"
 cask "vnc-viewer"
 cask "clipy"
@@ -41,7 +43,6 @@ cask "obsidian"
 # Communication
 cask "telegram"
 cask "whatsapp"
-cask "slack"
 
 # Office
 cask "microsoft-teams"
@@ -49,6 +50,3 @@ cask "microsoft-outlook"
 cask "microsoft-excel"
 cask "microsoft-word"
 cask "onedrive"
-
-# VPN
-cask "forticlient-vpn"
