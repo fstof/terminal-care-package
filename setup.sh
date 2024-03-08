@@ -34,8 +34,8 @@ echo "oh-my-zsh"
 
   echo ""
   echo "set p10k configuration"
-    ln -s $HOME/.oh-my-zsh/custom/themes/p10kDracula/files/.p10k.zsh $HOME/.p10k.zsh
-    # ln -s $HOME/terminal-care-package/dotfiles/p10k.zsh $HOME/.p10k.zsh
+    # ln -s $HOME/.oh-my-zsh/custom/themes/p10kDracula/files/.p10k.zsh $HOME/.p10k.zsh
+    ln -s $HOME/terminal-care-package/dotfiles/p10k.zsh $HOME/.p10k.zsh
 
   echo ""
   echo "agnoster-fstof theme"
