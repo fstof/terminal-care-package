@@ -25,6 +25,7 @@ brew "scrcpy"
 brew "syncthing"
 
 # Software
+cask "applite"
 cask "google-chrome"
 cask "opera"
 cask "adobe-acrobat-reader"
