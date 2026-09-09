@@ -39,6 +39,11 @@ cask "obsidian"
 cask "raycast"
 cask "mac-mouse-fix@2"
 
+#AI
+cask "antigravity-cli"
+brew "opencode"
+brew "herdr"
+
 # Communication
 cask "telegram"
 cask "whatsapp"

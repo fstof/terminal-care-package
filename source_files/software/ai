@@ -1,0 +1,2 @@
+# Added by Antigravity CLI installer
+export PATH="$HOME/.local/bin:$HOME/.antigravity-ide/antigravity-ide/bin:$PATH"
