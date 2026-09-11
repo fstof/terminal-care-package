@@ -4,6 +4,7 @@ tap "leoafarias/fvm"
 # Development
 brew "git"
 brew "nvm"
+brew "neovim"
 brew "fvm"
 brew "rbenv"
 cask "visual-studio-code"
