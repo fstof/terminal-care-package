@@ -1,0 +1,119 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 4,
+  "final_space": true,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "os",
+          "style": "powerline",
+          "powerline_symbol": "\ue0c6",
+          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+          "foreground": "p:text-light",
+          "background": "#6272a4",
+          "leading_diamond": "\ue0b6"
+        },
+        {
+          "type": "session",
+          "style": "diamond",
+          "foreground": "p:text-light",
+          "background": "#6272a4",
+          "trailing_diamond": "\ue0b0",
+          "template": " {{ .UserName }} ",
+          "powerline_symbol": "\ue0b0"
+        },
+        {
+          "type": "path",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "p:text-light",
+          "background": "#bd93f9",
+          "template": " \uf07c {{ .Path }} ",
+          "options": {
+            "style": "agnoster_short",
+            "max_depth": 3
+          }
+        },
+        {
+          "type": "git",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "p:text-light",
+          "background": "p:git-bg",
+          "foreground_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}p:text-dark{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:text-light{{ end }}",
+            "{{ if gt .Ahead 0 }}p:text-light{{ end }}"
+          ],
+          "background_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}p:git-modified-bg{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:git-diverged-bg{{ end }}",
+            "{{ if gt .Ahead 0 }}p:git-ahead-bg{{ end }}"
+          ],
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
+          "options": {
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "executiontime",
+          "style": "diamond",
+          "foreground": "p:text-dark",
+          "background": "#f1fa8c",
+          "leading_diamond": "\ue0b2",
+          "trailing_diamond": "\ue0b4",
+          "template": " \uf252 {{ .FormattedMs }} ",
+          "options": {
+            "threshold": 500
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "status",
+          "style": "plain",
+          "foreground": "p:prompt-ok",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}p:prompt-error{{ end }}"
+          ],
+          "template": "\u276f ",
+          "options": {
+            "always_enabled": true
+          }
+        }
+      ]
+    }
+  ],
+  "palette": {
+    "text-light": "#ffffff",
+    "text-dark": "#111111",
+    "session-bg": "#c386f1",
+    "path-bg": "#61AFEF",
+    "git-bg": "#4eca6a",
+    "git-modified-bg": "#f4d03f",
+    "git-diverged-bg": "#f26d50",
+    "git-ahead-bg": "#89d1dc",
+    "node-bg": "#6CA35E",
+    "python-bg": "#FFDE57",
+    "go-bg": "#00ADD8",
+    "rust-bg": "#99908a",
+    "exectime-bg": "#d62976",
+    "prompt-ok": "#e0f8ff",
+    "prompt-error": "#ef5350"
+  }
+}
