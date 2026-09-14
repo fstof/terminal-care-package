@@ -6,3 +6,5 @@
 alias cls="clear"
 alias d="fvm dart"
 alias f="fvm flutter"
+alias v="nvim"
+
