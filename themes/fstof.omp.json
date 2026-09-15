@@ -9,21 +9,13 @@
       "segments": [
         {
           "type": "os",
-          "style": "powerline",
+          "style": "diamond",
           "powerline_symbol": "\ue0c6",
           "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
           "foreground": "p:text-light",
           "background": "#6272a4",
-          "leading_diamond": "\ue0b6"
-        },
-        {
-          "type": "session",
-          "style": "diamond",
-          "foreground": "p:text-light",
-          "background": "#6272a4",
-          "trailing_diamond": "\ue0b0",
-          "template": " {{ .UserName }} ",
-          "powerline_symbol": "\ue0b0"
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b0"
         },
         {
           "type": "path",
@@ -31,10 +23,9 @@
           "powerline_symbol": "\ue0b0",
           "foreground": "p:text-light",
           "background": "#bd93f9",
-          "template": " \uf07c {{ .Path }} ",
+          "template": " \uf07c {{ .Folder }}",
           "options": {
-            "style": "agnoster_short",
-            "max_depth": 3
+            "style": "folder"
           }
         },
         {

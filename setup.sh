@@ -12,6 +12,10 @@ echo  "Vim"
   vim +PluginInstall +qall
 
 echo ""
+echo  "NeoVim"
+  ln -s $HOME/terminal-care-package/dotfiles/nvim $HOME/.config/nvim
+
+echo ""
 echo "Terminal"
   echo "- Installing oh-my-zsh"
   git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
