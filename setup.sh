@@ -16,6 +16,11 @@ echo "NeoVim"
 ln -s $HOME/terminal-care-package/dotfiles/lazyVim $HOME/.config/nvim
 
 echo ""
+echo "Herdr"
+mkdir -p $HOME/.config/herdr
+ln -s ~/terminal-care-package/dotfiles/herdr/config.toml $HOME/.config/herdr/config.toml
+
+echo ""
 echo "Terminal"
 echo "- Installing oh-my-zsh"
 git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh

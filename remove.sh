@@ -11,5 +11,6 @@ rm -rf $HOME/.autocomplete
 rm -rf $HOME/.vim/bundle
 rm -rf $HOME/.p10k.zsh
 rm -rf $HOME/.config/nvim
+rm -rf $HOME/.config/herdr/config.toml
 
 echo "Symbolic links deleted"
