@@ -12,6 +12,8 @@ cask 'visual-studio-code'
 cask 'android-studio'
 cask 'xcodes'
 brew 'python'
+brew 'fd'
+brew 'ripgrep'
 
 # Utils
 brew 'yq'
