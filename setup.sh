@@ -5,13 +5,6 @@ echo ""
 ./remove.sh
 
 echo ""
-echo "Vim"
-mkdir -p $HOME/.vim/bundle
-git clone --depth=1 https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
-ln -s $HOME/terminal-care-package/dotfiles/vimrc $HOME/.vimrc
-vim +PluginInstall +qall
-
-echo ""
 echo "NeoVim"
 ln -s $HOME/terminal-care-package/dotfiles/lazyVim $HOME/.config/nvim
 
