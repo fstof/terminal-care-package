@@ -9,31 +9,18 @@
 ####
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export PATH=$HOME/.local/bin:$PATH
+export PATH=/opt/homebrew/bin:$PATH
 
 ####
 #### Base for terminal-care-package. change this if you cloned to somewhere else
 ####
 export CARE_PACKAGE=$HOME/terminal-care-package
 
-export PATH=$HOME/.local/bin:$PATH
-
 ####
 #### Custom aliases
 ####
 source $CARE_PACKAGE/source_files/aliasesrc
-
-####
-#### some flags for ruby
-####
-export LDFLAGS="-L/usr/local/opt/ruby/lib"
-export CPPFLAGS="-I/usr/local/opt/ruby/include"
-export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
-export PATH="/opt/homebrew/bin":$PATH
-export EDITOR="code --wait"
-
-####
-#### minikube / hyperkit / docker setup
-####
 
 ####
 #### Comment out the source files you dont need
@@ -42,7 +29,7 @@ export EDITOR="code --wait"
 source $CARE_PACKAGE/source_files/software/androidrc
 #source $CARE_PACKAGE/source_files/software/gradlerc
 source $CARE_PACKAGE/source_files/software/nvmrc
-# source $CARE_PACKAGE/source_files/software/rubyrc
+source $CARE_PACKAGE/source_files/software/rubyrc
 source $CARE_PACKAGE/source_files/software/flutterrc
 #source $CARE_PACKAGE/source_files/software/rustrc
 #source $CARE_PACKAGE/source_files/software/dockerrc
