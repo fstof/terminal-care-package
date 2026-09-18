@@ -2,6 +2,7 @@ return {
   {
     "folke/snacks.nvim",
     opts = {
+      image = { enabled = true }, -- Enables embedded terminal graphics rendering
       picker = {
         sources = {
           explorer = {
