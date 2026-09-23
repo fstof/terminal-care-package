@@ -5,6 +5,8 @@
 -- Indent visual selection without losing selection
 vim.keymap.set("v", "<Tab>", ">gv", { desc = "Indent selection" })
 vim.keymap.set("v", "<S-Tab>", "<gv", { desc = "Outdent selection" })
+vim.keymap.set("i", "jj", "<escape>", { desc = "Escape insert mode" })
+vim.keymap.set("i", "jk", "<escape>", { desc = "Escape insert mode" })
 
 -- Keymaps for nvim-dap
 vim.keymap.set("n", "<leader>db", function()
@@ -25,6 +27,19 @@ end, { desc = "Debug: Step Into" })
 vim.keymap.set("n", "<F12>", function()
   require("dap").step_out()
 end, { desc = "Debug: Step Out" })
+
+vim.keymap.set("n", "<leader>dc", function()
+  require("dap").continue()
+end, { desc = "Debug: Start/Continue" })
+vim.keymap.set("n", "<leader>do", function()
+  require("dap").step_over()
+end, { desc = "Debug: Step Over" })
+vim.keymap.set("n", "<leader>di", function()
+  require("dap").step_into()
+end, { desc = "Debug: Step Into" })
+vim.keymap.set("n", "<leader>du", function()
+  require("dapui").toggle()
+end, { desc = "Debug: Toggle debug view" })
 
 -- Keymaps for flutter-tools
 vim.keymap.set("n", "<leader>fr", ":FlutterRun<CR>", { desc = "Flutter Run" })

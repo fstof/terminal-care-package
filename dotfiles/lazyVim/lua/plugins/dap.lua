@@ -5,6 +5,19 @@ return {
       "rcarriga/nvim-dap-ui",
       "nvim-neotest/nvim-nio",
     },
+    opts = function()
+      -- This extends the built-in LazyVim signs table
+      local signs = {
+        DapBreakpoint = { text = "🛑", texthl = "DapBreakpoint" },
+        DapBreakpointCondition = { text = "⚠️", texthl = "DapBreakpointCondition" },
+        DapBreakpointRejected = { text = "🚫", texthl = "DapBreakpointRejected" },
+        DapLogPoint = { text = "📝", texthl = "DapLogPoint" },
+        DapStopped = { text = "➡️", texthl = "DapStopped" },
+      }
+      for name, sign in pairs(signs) do
+        vim.fn.sign_define(name, sign)
+      end
+    end,
     config = function()
       local dap = require("dap")
       local dapui = require("dapui")
