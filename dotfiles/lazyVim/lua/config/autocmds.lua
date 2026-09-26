@@ -6,30 +6,72 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+local external_media_group = vim.api.nvim_create_augroup("ExternalMediaOpener", { clear = true })
 
--- Handle common binary files by opening them in the default OS application instead of trying to display them in Neovim.
+-- List all non-text file patterns to delegate to the OS
+local media_patterns = {
+  -- Images
+  "*.png",
+  "*.jpg",
+  "*.jpeg",
+  "*.webp",
+  "*.gif",
+  "*.bmp",
+  "*.avif",
+  "*.ico",
+  "*.tiff",
+  "*.svg",
+
+  -- Documents & Books
+  "*.pdf",
+  "*.epub",
+
+  -- Video
+  "*.mp4",
+  "*.mkv",
+  "*.mov",
+  "*.avi",
+  "*.webm",
+  "*.m4v",
+
+  -- Audio
+  "*.mp3",
+  "*.wav",
+  "*.flac",
+  "*.m4a",
+  "*.aac",
+  "*.ogg",
+}
+
 vim.api.nvim_create_autocmd("BufReadCmd", {
-  pattern = { "*.pdf", "*.png", "*.jpg", "*.jpeg", "*.webp", "*.mp4" },
-  callback = function(ctx)
-    local filepath = ctx.match
-
-    -- Detect correct OS launcher command (macOS check first)
-    local open_cmd = "open"
-    if vim.fn.has("macunix") == 1 then
-      open_cmd = "open"
-    elseif vim.fn.has("win32") == 1 then
-      open_cmd = "start"
-    elseif vim.fn.has("unix") == 1 then
-      open_cmd = "xdg-open"
+  group = external_media_group,
+  pattern = media_patterns,
+  callback = function(args)
+    -- Guard: Skip execution if inside a floating preview window (e.g. Snacks/Telescope picker preview)
+    local win = vim.api.nvim_get_current_win()
+    local win_cfg = vim.api.nvim_win_get_config(win)
+    if win_cfg.relative and win_cfg.relative ~= "" then
+      return
     end
 
-    -- Run completely detached from Neovim using the modern system API
-    vim.system({ open_cmd, filepath }, { detach = true })
+    local filepath = vim.fn.fnamemodify(args.file, ":p")
 
-    -- Cleanly eliminate the blank text-pane placeholder
+    -- Launch system default application asynchronously
+    if vim.ui and vim.ui.open then
+      vim.ui.open(filepath)
+    else
+      local opener = vim.fn.has("mac") == 1 and "open" or (vim.fn.has("win32") == 1 and "start" or "xdg-open")
+      vim.fn.jobstart({ opener, filepath }, { detach = true })
+    end
+
+    -- Clean up: switch back to the previous buffer and wipe out the media buffer
     vim.schedule(function()
-      if vim.api.nvim_buf_is_valid(ctx.buf) then
-        pcall(vim.api.nvim_buf_delete, ctx.buf, { force = true })
+      if vim.api.nvim_buf_is_valid(args.buf) then
+        local prev_buf = vim.fn.bufnr("#")
+        if prev_buf > 0 and prev_buf ~= args.buf and vim.api.nvim_buf_is_loaded(prev_buf) then
+          pcall(vim.api.nvim_set_current_buf, prev_buf)
+        end
+        pcall(vim.cmd, "bwipeout! " .. args.buf)
       end
     end)
   end,
