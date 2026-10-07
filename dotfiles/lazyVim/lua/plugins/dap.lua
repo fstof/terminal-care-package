@@ -37,6 +37,10 @@ return {
           or content:match("\n%s*flutter:%s*$")
           or content:match("sdk:%s*flutter")
       end
+
+      -- Disable exception breakpoints globally by default
+      dap.defaults.fallback.exception_breakpoints = {}
+
       -- Standalone Flutter adapter
       dap.adapters.flutter = {
         type = "executable",
@@ -46,11 +50,6 @@ return {
 
       -- Dynamic Dart adapter: mirrors VS Code Dart-Code behavior
       dap.adapters.dart = function(callback, config)
-        error("DART ADAPTER WAS CALLED")
-        vim.cmd("echomsg " .. vim.fn.string(config))
-        vim.notify(vim.inspect(config), vim.log.levels.INFO, {
-          title = "DAP config",
-        })
         if is_flutter_project(config) then
           callback({
             type = "executable",

@@ -13,8 +13,8 @@ return {
           enabled = true,
           run_via_dap = true,
           register_configurations = function(_)
-            local dap = require("dap")
-            dap.load_launchjs()
+            -- local dap = require("dap")
+            -- dap.load_launchjs()
           end,
         },
         dev_log = {
