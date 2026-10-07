@@ -12,5 +12,6 @@ rm -rf $HOME/.vim/bundle
 rm -rf $HOME/.p10k.zsh
 rm -rf $HOME/.config/nvim
 rm -rf $HOME/.config/herdr/config.toml
+rm -rf $HOME/.config/ghostty
 
 echo "Symbolic links deleted"

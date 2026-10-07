@@ -20,6 +20,10 @@ git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-z
 ln -s $HOME/terminal-care-package/dotfiles/zshrc $HOME/.zshrc
 
 echo ""
+echo "Ghostty"
+ln -s $HOME/terminal-care-package/dotfiles/ghostty $HOME/.config/ghostty
+
+echo ""
 echo "- Installing Oh My Posh"
 curl -s https://ohmyposh.dev/install.sh | bash -s
 
