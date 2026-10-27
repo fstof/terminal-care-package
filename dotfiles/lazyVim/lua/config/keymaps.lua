@@ -47,3 +47,41 @@ vim.keymap.set("n", "<leader>fq", ":FlutterQuit<CR>", { desc = "Flutter Quit" })
 vim.keymap.set("n", "<leader>fR", ":FlutterReload<CR>", { desc = "Flutter Hot Reload" })
 vim.keymap.set("n", "<leader>fd", ":FlutterDevices<CR>", { desc = "Select Flutter Device" })
 vim.keymap.set("n", "<leader>fD", ":FlutterEmulators<CR>", { desc = "Select Flutter Emulator" })
+
+-- Keymaps for multicursor.nvim
+local mc = require("multicursor-nvim")
+-- Add or skip cursor above/below the main cursor.
+vim.keymap.set({ "n", "x" }, "<up>", function()
+  mc.lineAddCursor(-1)
+end, { desc = "Add cursor above" })
+vim.keymap.set({ "n", "x" }, "<down>", function()
+  mc.lineAddCursor(1)
+end, { desc = "Add cursor below" })
+vim.keymap.set({ "n", "x" }, "<leader><up>", function()
+  mc.lineSkipCursor(-1)
+end, { desc = "Skip cursor above" })
+vim.keymap.set({ "n", "x" }, "<leader><down>", function()
+  mc.lineSkipCursor(1)
+end, { desc = "Skip cursor below" })
+
+-- Add or skip adding a new cursor by matching word/selection
+vim.keymap.set({ "n", "x" }, "<leader>n", function()
+  mc.matchAddCursor(1)
+end, { desc = "Match add cursor next" })
+vim.keymap.set({ "n", "x" }, "<leader>s", function()
+  mc.matchSkipCursor(1)
+end, { desc = "Match skip cursor next" })
+vim.keymap.set({ "n", "x" }, "<leader>N", function()
+  mc.matchAddCursor(-1)
+end, { desc = "Match add cursor prev" })
+vim.keymap.set({ "n", "x" }, "<leader>S", function()
+  mc.matchSkipCursor(-1)
+end, { desc = "Match skip cursor prev" })
+
+-- Add and remove cursors with control + left click.
+vim.keymap.set("n", "<c-leftmouse>", mc.handleMouse)
+vim.keymap.set("n", "<c-leftdrag>", mc.handleMouseDrag)
+vim.keymap.set("n", "<c-leftrelease>", mc.handleMouseRelease)
+
+-- Disable and enable cursors.
+vim.keymap.set({ "n", "x" }, "<c-q>", mc.toggleCursor, { desc = "Toggle cursors" })
