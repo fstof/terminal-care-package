@@ -85,3 +85,14 @@ vim.keymap.set("n", "<c-leftrelease>", mc.handleMouseRelease)
 
 -- Disable and enable cursors.
 vim.keymap.set({ "n", "x" }, "<c-q>", mc.toggleCursor, { desc = "Toggle cursors" })
+
+-- Toggle Auto Save
+Snacks.toggle({
+  name = "Auto Save",
+  get = function()
+    return vim.g.auto_save == true
+  end,
+  set = function(state)
+    vim.g.auto_save = state
+  end,
+}):map("<leader>ua")

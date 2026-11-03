@@ -76,3 +76,27 @@ vim.api.nvim_create_autocmd("BufReadCmd", {
     end)
   end,
 })
+
+-- Auto-save enabled by default
+vim.g.auto_save = true
+
+vim.api.nvim_create_autocmd({ "InsertLeave", "BufLeave", "FocusLost" }, {
+  group = vim.api.nvim_create_augroup("AutoSave", { clear = true }),
+  callback = function(event)
+    if not vim.g.auto_save then
+      return
+    end
+    local buf = event.buf
+    if
+      vim.bo[buf].modified
+      and vim.bo[buf].buftype == ""
+      and vim.fn.bufname(buf) ~= ""
+      and vim.bo[buf].modifiable
+      and not vim.bo[buf].readonly
+    then
+      vim.api.nvim_buf_call(buf, function()
+        vim.cmd("silent! write")
+      end)
+    end
+  end,
+})
