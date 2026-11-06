@@ -79,7 +79,6 @@ vim.api.nvim_create_autocmd("BufReadCmd", {
 
 -- Auto-save enabled by default
 vim.g.auto_save = true
-
 vim.api.nvim_create_autocmd({ "InsertLeave", "BufLeave", "FocusLost" }, {
   group = vim.api.nvim_create_augroup("AutoSave", { clear = true }),
   callback = function(event)
@@ -97,6 +96,16 @@ vim.api.nvim_create_autocmd({ "InsertLeave", "BufLeave", "FocusLost" }, {
       vim.api.nvim_buf_call(buf, function()
         vim.cmd("silent! write")
       end)
+    end
+  end,
+})
+
+-- Automatically assign the "log" filetype to the DAP REPL console for highlights
+vim.api.nvim_create_autocmd("BufWinEnter", {
+  pattern = "*",
+  callback = function()
+    if vim.bo.filetype == "dap-repl" then
+      vim.bo.filetype = "log"
     end
   end,
 })

@@ -65,7 +65,29 @@ return {
         end
       end
 
-      dapui.setup()
+      -- Explicitly setup dap-ui with custom layouts and silence the LSP fields warning
+      ---@diagnostic disable-next-line: missing-fields
+      dapui.setup({
+        layouts = {
+          {
+            elements = {
+              { id = "scopes", size = 0.25 },
+              { id = "breakpoints", size = 0.25 },
+              { id = "stacks", size = 0.25 },
+              { id = "watches", size = 0.25 },
+            },
+            position = "left",
+            size = 40,
+          },
+          {
+            elements = {
+              { id = "repl", size = 1.0 }, -- Full width bottom log panel
+            },
+            position = "bottom",
+            size = 10,
+          },
+        },
+      })
 
       -- Automatically open/close DAP UI during debugging sessions
       dap.listeners.before.attach.dapui_config = function()
@@ -83,3 +105,4 @@ return {
     end,
   },
 }
+

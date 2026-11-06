@@ -18,7 +18,7 @@ return {
           end,
         },
         dev_log = {
-          enabled = true,
+          enabled = false,
           open_cmd = "15split",
         },
       })

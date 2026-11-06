@@ -40,6 +40,9 @@ end, { desc = "Debug: Step Into" })
 vim.keymap.set("n", "<leader>du", function()
   require("dapui").toggle()
 end, { desc = "Debug: Toggle debug view" })
+vim.keymap.set('n', '<leader>rc', function()
+  require('dap').repl.clear()
+end, { desc = "DAP: Clear REPL Console" })
 
 -- Keymaps for flutter-tools
 vim.keymap.set("n", "<leader>fr", ":FlutterRun<CR>", { desc = "Flutter Run" })
