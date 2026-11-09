@@ -9,6 +9,10 @@ echo "NeoVim"
 ln -s $HOME/terminal-care-package/dotfiles/lazyVim $HOME/.config/nvim
 
 echo ""
+echo "lazygit"
+ln -s $HOME/terminal-care-package/configs/lazygit $HOME/.config/lazygit
+
+echo ""
 echo "Herdr"
 mkdir -p $HOME/.config/herdr
 ln -s ~/terminal-care-package/dotfiles/herdr/config.toml $HOME/.config/herdr/config.toml

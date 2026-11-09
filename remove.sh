@@ -13,5 +13,6 @@ rm -rf $HOME/.p10k.zsh
 rm -rf $HOME/.config/nvim
 rm -rf $HOME/.config/herdr/config.toml
 rm -rf $HOME/.config/ghostty
+rm -rf $HOME/.config/lazygit
 
 echo "Symbolic links deleted"

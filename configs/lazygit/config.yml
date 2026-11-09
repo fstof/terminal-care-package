@@ -1,0 +1,6 @@
+git:
+  diffContextSize: 1000
+  log:
+    showGraph: always
+    showWholeGraph: true
+

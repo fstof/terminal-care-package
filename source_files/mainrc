@@ -16,6 +16,7 @@ export PATH=/opt/homebrew/bin:$PATH
 #### Base for terminal-care-package. change this if you cloned to somewhere else
 ####
 export CARE_PACKAGE=$HOME/terminal-care-package
+export XDG_CONFIG_HOME="$HOME/.config"
 
 ####
 #### Custom aliases
