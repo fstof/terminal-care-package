@@ -6,7 +6,7 @@ echo ""
 
 echo ""
 echo "NeoVim"
-ln -s $HOME/terminal-care-package/dotfiles/lazyVim $HOME/.config/nvim
+ln -s $HOME/terminal-care-package/configs/lazyVim $HOME/.config/nvim
 
 echo ""
 echo "lazygit"
@@ -15,7 +15,7 @@ ln -s $HOME/terminal-care-package/configs/lazygit $HOME/.config/lazygit
 echo ""
 echo "Herdr"
 mkdir -p $HOME/.config/herdr
-ln -s ~/terminal-care-package/dotfiles/herdr/config.toml $HOME/.config/herdr/config.toml
+ln -s ~/terminal-care-package/configs/herdr/config.toml $HOME/.config/herdr/config.toml
 
 echo ""
 echo "Terminal"
@@ -25,7 +25,7 @@ ln -s $HOME/terminal-care-package/dotfiles/zshrc $HOME/.zshrc
 
 echo ""
 echo "Ghostty"
-ln -s $HOME/terminal-care-package/dotfiles/ghostty $HOME/.config/ghostty
+ln -s $HOME/terminal-care-package/configs/ghostty $HOME/.config/ghostty
 
 echo ""
 echo "- Installing Oh My Posh"
