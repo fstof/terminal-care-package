@@ -4,3 +4,8 @@ git:
     showGraph: always
     showWholeGraph: true
 
+customCommands:
+  - key: 'W'
+    context: 'worktrees'
+    description: 'Switch Neovim cwd to selected worktree'
+    command: 'nvim --server "$NVIM" --remote-send "<C-\><C-n><Cmd>close<CR><Cmd>cd {{.SelectedWorktree.Path}}<CR>"'

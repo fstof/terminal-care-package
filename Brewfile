@@ -45,7 +45,7 @@ cask 'mac-mouse-fix@2'
 
 # AI
 cask 'antigravity-cli'
-brew 'opencode'
+brew 'anomalyco/tap/opencode-v2'
 brew 'herdr'
 
 # Communication

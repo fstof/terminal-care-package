@@ -8,13 +8,12 @@ return {
     },
     config = function()
       require("flutter-tools").setup({
+        fvm = true,
         root_patterns = { ".git", "pubspec.yaml" },
         debugger = {
           enabled = true,
-          run_via_dap = true,
           register_configurations = function(_)
-            -- local dap = require("dap")
-            -- dap.load_launchjs()
+            -- Leave empty or load launch.json if needed; nvim-dap automatically reads .vscode/launch.json
           end,
         },
         dev_log = {

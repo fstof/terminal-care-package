@@ -40,8 +40,8 @@ end, { desc = "Debug: Step Into" })
 vim.keymap.set("n", "<leader>du", function()
   require("dapui").toggle()
 end, { desc = "Debug: Toggle debug view" })
-vim.keymap.set('n', '<leader>rc', function()
-  require('dap').repl.clear()
+vim.keymap.set("n", "<leader>rc", function()
+  require("dap").repl.clear()
 end, { desc = "DAP: Clear REPL Console" })
 
 -- Keymaps for flutter-tools
@@ -99,3 +99,27 @@ Snacks.toggle({
     vim.g.auto_save = state
   end,
 }):map("<leader>ua")
+
+-- Filter LazyGit to the current file when opening it with <leader>gg
+vim.keymap.set("n", "<leader>gg", function()
+  local file = vim.api.nvim_buf_get_name(0)
+  local rel_path = vim.fn.fnamemodify(file, ":.")
+
+  -- Open standard Lazygit (defaults to the Files panel)
+  local win = Snacks.lazygit()
+
+  -- If the current buffer is a valid file, filter the Files panel to it
+  if file ~= "" and vim.fn.filereadable(file) == 1 and win and win.buf then
+    vim.defer_fn(function()
+      if vim.api.nvim_buf_is_valid(win.buf) then
+        local chan = vim.bo[win.buf].channel
+        if chan and chan > 0 then
+          -- Sends '/' to start filtering, types the relative path, and presses Enter
+          vim.api.nvim_chan_send(chan, "/" .. rel_path .. "\r")
+        end
+      end
+    end, 150)
+  end
+end, { desc = "Lazygit (Highlight Current File)" })
+
+
